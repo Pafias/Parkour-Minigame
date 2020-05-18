@@ -1,0 +1,11 @@
+name: ParkourMinigame
+version: ${project.version}
+main: me.pafias.parkourminigame.ParkourMinigame
+api-version: 1.13
+authors: [Pafias]
+description: Parkour Minigame
+commands:
+  parkourminigame:
+    usage: /parkourminigame
+    aliases: [parkour, pm]
+    description: Parkour Minigame
