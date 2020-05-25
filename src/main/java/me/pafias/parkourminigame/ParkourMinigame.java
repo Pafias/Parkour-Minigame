@@ -4,10 +4,7 @@ import me.pafias.parkourminigame.commands.ParkourMinigameCommand;
 import me.pafias.parkourminigame.game.Game;
 import me.pafias.parkourminigame.game.GameManager;
 import me.pafias.parkourminigame.game.GameState;
-import me.pafias.parkourminigame.listeners.InGameListener;
-import me.pafias.parkourminigame.listeners.JoinListener;
-import me.pafias.parkourminigame.listeners.PreGameListener;
-import me.pafias.parkourminigame.listeners.QuitListener;
+import me.pafias.parkourminigame.listeners.*;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
@@ -78,6 +75,7 @@ public final class ParkourMinigame extends JavaPlugin {
         pm.registerEvents(new PlayerlistManager(), this);
         pm.registerEvents(new PreGameListener(), this);
         pm.registerEvents(new InGameListener(), this);
+        pm.registerEvents(new GUIListener(), this);
     }
 
     public Location getLobby() {

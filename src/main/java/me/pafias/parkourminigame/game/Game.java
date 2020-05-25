@@ -69,7 +69,7 @@ public class Game {
                         broadcast(ChatColor.GREEN + "Game started!");
                         for (User p : getPlayers()) {
                             p.getPlayer().teleport(spawn);
-                            p.getPlayer().playSound(p.getPlayer().getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 1F, 1F);
+                            p.getPlayer().playSound(p.getPlayer().getLocation(), Sound.BLOCK_NOTE_PLING, 1F, 1F);
                             p.getPlayer().setExp(0);
                             p.getPlayer().setLevel(0);
                             p.getPlayer().setGameMode(GameMode.SURVIVAL);
@@ -85,7 +85,7 @@ public class Game {
                     }
                     if (time == 10 || time == 5 || time == 4 || time == 3 || time == 2 || time == 1) {
                         for (User p : getPlayers()) {
-                            p.getPlayer().playSound(p.getPlayer().getLocation(), Sound.BLOCK_NOTE_BLOCK_PLING, 1F, 1F);
+                            p.getPlayer().playSound(p.getPlayer().getLocation(), Sound.BLOCK_NOTE_PLING, 1F, 1F);
                         }
                         broadcast(ChatColor.RED + "The game will start in " + time + " seconds!");
                     }

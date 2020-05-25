@@ -20,10 +20,10 @@ import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.EntityExplodeEvent;
 import org.bukkit.event.entity.FoodLevelChangeEvent;
-import org.bukkit.event.player.PlayerAttemptPickupItemEvent;
 import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
+import org.bukkit.event.player.PlayerPickupItemEvent;
 import org.bukkit.inventory.meta.FireworkMeta;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
@@ -61,17 +61,17 @@ public class InGameListener implements Listener {
                         case LAPIS_BLOCK:
                             event.getClickedBlock().breakNaturally();
                             user.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.SPEED, (16 * 20), 1, false, false));
-                            user.getPlayer().playSound(user.getPlayer().getLocation(), Sound.ENTITY_FIREWORK_ROCKET_LAUNCH, 1F, 1F);
+                            user.getPlayer().playSound(user.getPlayer().getLocation(), Sound.ENTITY_FIREWORK_LAUNCH, 1F, 1F);
                             break;
                         case IRON_BLOCK:
                             event.getClickedBlock().breakNaturally();
                             user.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.JUMP, (16 * 20), 1, false, false));
-                            user.getPlayer().playSound(user.getPlayer().getLocation(), Sound.ENTITY_FIREWORK_ROCKET_LAUNCH, 1F, 1F);
+                            user.getPlayer().playSound(user.getPlayer().getLocation(), Sound.ENTITY_FIREWORK_LAUNCH, 1F, 1F);
                             break;
                         case GLASS:
                             event.getClickedBlock().breakNaturally();
                             user.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.INVISIBILITY, (16 * 20), 1, false, false));
-                            user.getPlayer().playSound(user.getPlayer().getLocation(), Sound.ENTITY_FIREWORK_ROCKET_LAUNCH, 1F, 1F);
+                            user.getPlayer().playSound(user.getPlayer().getLocation(), Sound.ENTITY_FIREWORK_LAUNCH, 1F, 1F);
                             break;
                         case DIAMOND_BLOCK:
                             event.getClickedBlock().breakNaturally();
@@ -133,7 +133,7 @@ public class InGameListener implements Listener {
     }
 
     @EventHandler
-    public void onItemPickup(PlayerAttemptPickupItemEvent event) {
+    public void onItemPickup(PlayerPickupItemEvent event) {
         if (Users.getUser(event.getPlayer()).isInGame())
             event.setCancelled(true);
     }
