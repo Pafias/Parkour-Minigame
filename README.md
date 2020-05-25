@@ -3,7 +3,7 @@
 
 pls don't steal kthx
 
-Tested (and recommended) Minecraft (server) version: **1.15.2**
+Tested (and recommended) Minecraft (server) version: **1.11.2**
 
 Config files not included.
 
